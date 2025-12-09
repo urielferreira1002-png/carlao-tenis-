@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlão Tennis | Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@600;700;800&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Carlão Tennis</a>
+        <nav>
+            <a href="#">Tênis</a>
+            <a href="#">Bolsas</a>
+            <a href="#">Mochilas</a>
+            <a href="#">Novidades</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-utilidade">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="carrinho.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    <div class="container" style="padding-top: 40px; padding-bottom: 80px;">
+        <h1 style="text-align: center; margin-bottom: 40px;">Fale Conosco</h1>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            
+            <div class="form-container">
+                <form action="#" method="POST">
+                    <h2 style="margin-top: 0; color: var(--cor-principal);">Envie sua Mensagem</h2>
+                    <div class="form-group">
+                        <label for="nome_contato">Seu Nome</label>
+                        <input type="text" id="nome_contato" name="nome_contato" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_contato">Seu E-mail</label>
+                        <input type="email" id="email_contato" name="email_contato" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="botao-principal" style="width: 100%;">Enviar Mensagem</button>
+                </form>
+            </div>
+
+            <div style="color: var(--cor-secundaria);">
+                <h2 style="color: var(--cor-principal);">Informações de Contato</h2>
+                <p style="margin-bottom: 25px;">Estamos disponíveis para tirar suas dúvidas de segunda a sexta, das 9h às 18h.</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <p><i class="fas fa-envelope" style="color: var(--cor-principal); margin-right: 10px;"></i> Email: <a href="mailto:contato@carlaotennis.com" style="color: var(--cor-secundaria);">contato@carlaotennis.com</a></p>
+                    <p><i class="fas fa-phone" style="color: var(--cor-principal); margin-right: 10px;"></i> Telefone: (31) 5555-5555</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--cor-principal); margin-right: 10px;"></i> Endereço: Av. Principal, 123 - Centro, BH/MG</p>
+                </div>
+                
+                <h2 style="color: var(--cor-principal);">Nossa Localização</h2>
+                <div style="height: 300px; background-color: var(--cor-detalhe); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--cor-secundaria);">
+                    [Placeholder para Mapa do Google]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Trocas e Devoluções</a> | 
+                <a href="#">Política de Privacidade</a> | 
+                <a href="contato.html">Fale Conosco</a>
+            </div>
+            <p>&copy; 2025 Carlão Tennis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

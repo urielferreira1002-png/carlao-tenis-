@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlão Tennis | Mochilas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@600;700;800&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilos Específicos da Página de Listagem (reutilizados) */
+        .listagem-layout {
+            display: flex;
+            gap: 30px;
+            padding-top: 40px;
+        }
+
+        .sidebar {
+            flex: 1; 
+            min-width: 250px;
+            background-color: var(--cor-detalhe); 
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .produtos-principal {
+            flex: 3; 
+        }
+
+        .sidebar h3 {
+            color: var(--cor-principal);
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--cor-fundo);
+            padding-bottom: 10px;
+        }
+
+        .filtro-grupo {
+            margin-bottom: 25px;
+        }
+
+        .filtro-grupo label {
+            display: block;
+            color: var(--cor-secundaria);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .filtro-grupo input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        .ordenacao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: var(--cor-detalhe);
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .ordenacao select {
+            padding: 8px 12px;
+            border: 1px solid var(--cor-principal);
+            background-color: var(--cor-fundo);
+            color: var(--cor-secundaria);
+            border-radius: 4px;
+        }
+        
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        @media (max-width: 992px) {
+            .listagem-layout {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Carlão Tennis</a>
+        <nav>
+            <a href="tenis.html">Tênis</a>
+            <a href="bolsas.html">Bolsas</a>
+            <a href="mochilas.html" style="color: var(--cor-principal);">Mochilas</a>
+            <a href="novidades.html">Novidades</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-utilidade">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="carrinho.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    <div class="container listagem-layout">
+        
+        <aside class="sidebar">
+            <h3>Filtros</h3>
+
+            <div class="filtro-grupo">
+                <label for="tipo_mochila">Uso</label>
+                <select id="tipo_mochila">
+                    <option value="">Todas as Categorias</option>
+                    <option value="viagem">Viagem</option>
+                    <option value="notebook">Notebook</option>
+                    <option value="casual">Casual</option>
+                </select>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Capacidade (Litros)</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> 15L - 25L</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> 25L - 40L</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> 40L +</label>
+                </div>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Cor</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> Preta</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> Bege</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> Verde Oliva</label>
+                </div>
+            </div>
+
+            <a href="#" class="botao-secundario" style="width: 100%; text-align: center;">Aplicar Filtros</a>
+        </aside>
+
+        <main class="produtos-principal">
+            <h1>Coleção de Mochilas</h1>
+            
+            <div class="ordenacao">
+                <p style="color: var(--cor-secundaria);">Mostrando 1–6 de 10 resultados</p>
+                <select>
+                    <option>Mais Relevantes</option>
+                    <option>Preço: Mais Baixo</option>
+                    <option>Preço: Mais Alto</option>
+                    <option>Mais Vendidos</option>
+                </select>
+            </div>
+
+            <div class="produtos-grid">
+                
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/400x300/1A1A1A/D4A373?text=Mochila+Viagem" alt="Mochila Viagem Resistente">
+                    <h3>Mochila Viagem Resistente</h3>
+                    <p class="preco">R$ 299,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/400x300/1A1A1A/D4A373?text=Mochila+Notebook" alt="Mochila Notebook">
+                    <h3>Mochila para Notebook 15"</h3>
+                    <p class="preco">R$ 180,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/400x300/1A1A1A/D4A373?text=Mochila+Casual" alt="Mochila Casual">
+                    <h3>Mochila Casual Urbana</h3>
+                    <p class="preco">R$ 125,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/400x300/1A1A1A/D4A373?text=Mochila+Esportiva" alt="Mochila Esportiva">
+                    <h3>Mochila Esportiva Reforçada</h3>
+                    <p class="preco">R$ 250,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/400x300/1A1A1A/D4A373?text=Mochila+Tactical" alt="Mochila Tactical">
+                    <h3>Mochila Tactical 40 Litros</h3>
+                    <p class="preco">R$ 450,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/400x300/1A1A1A/D4A373?text=Mochila+Simples" alt="Mochila Simples">
+                    <h3>Mochila Simples para Escola</h3>
+                    <p class="preco">R$ 89,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="botao-secundario">Ver Mais Produtos</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Trocas e Devoluções</a> | 
+                <a href="#">Política de Privacidade</a> | 
+                <a href="contato.html">Fale Conosco</a>
+            </div>
+            <p>&copy; 2025 Carlão Tennis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

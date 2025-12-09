@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlão Tennis | Tênis Clássico Bege</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@600;700;800&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilos Específicos para a Página de Produto */
+        .produto-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding-top: 40px;
+        }
+
+        .galeria img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .product-info h1 {
+            color: var(--cor-secundaria);
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            font-family: var(--fonte-detalhe);
+            font-size: 2.2em;
+            font-weight: 900;
+            color: var(--cor-principal);
+            margin-bottom: 25px;
+        }
+
+        .product-options .option-group {
+            margin-bottom: 25px;
+        }
+
+        .product-options label {
+            display: block;
+            font-weight: 600;
+            color: var(--cor-principal);
+            margin-bottom: 10px;
+        }
+
+        .product-options select, 
+        .quantity-selector input {
+            padding: 10px;
+            border: 1px solid var(--cor-principal);
+            background-color: var(--cor-fundo);
+            color: var(--cor-secundaria);
+            border-radius: 4px;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+        }
+        
+        .quantity-selector input {
+            width: 60px;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        .product-description h3 {
+            color: var(--cor-principal);
+            margin-top: 40px;
+            border-bottom: 1px solid var(--cor-detalhe);
+            padding-bottom: 10px;
+        }
+        
+        @media (max-width: 992px) {
+            .produto-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Carlão Tennis</a>
+        <nav>
+            <a href="tenis.html">Tênis</a>
+            <a href="bolsas.html">Bolsas</a>
+            <a href="mochilas.html">Mochilas</a>
+            <a href="novidades.html">Novidades</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-utilidade">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="carrinho.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    <div class="container produto-layout">
+        
+        <div class="galeria">
+            <img src="/1.jpeg" alt="Tênis Clássico Bege">
+            <div style="display: flex; gap: 10px;">
+                <img src="/2.jpeg" alt="Detalhe 1" style="width: 100px; height: 100px; cursor: pointer;">
+                <img src="/6.jpeg" alt="Detalhe 2" style="width: 100px; height: 100px; cursor: pointer;">
+                <img src="/7.jpeg" alt="Detalhe 3" style="width: 100px; height: 100px; cursor: pointer;">
+        </div>
+
+        <div class="product-info">
+            <h1>Mizuno Wave Prophecy</h1>
+            <p style="color: var(--cor-secundaria); font-weight: 500;">SKU: TCBEG40</p>
+            
+            <div class="price">R$ 170,00</div>
+
+            <p style="margin-bottom: 30px; color: var(--cor-secundaria);">
+                O tênis ideal para quem busca o máximo em conforto e um visual moderno. Com um design arrojado e esportivo, este modelo azul vibrante é a escolha perfeita para o seu dia a dia.
+            </p>
+
+            <div class="product-options">
+                <div class="option-group">
+                    <label for="tamanho">Tamanho</label>
+                    <select id="tamanho">
+                        <option value="40">40</option>
+                        <option value="39">39</option>
+                        <option value="41">41</option>
+                       <option value="42">42</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <label for="cor">Cor</label>
+                    <select id="cor">
+                        <option value="bege">preto com azul</option>
+                        <option value="preto">Preto</option>
+                        <option value="branco">Branco</option>
+                        <option value="Azul">Azul</option>
+                    </select>
+                </div>
+
+                <div class="option-group quantity-selector">
+                    <label for="quantidade" style="margin-bottom: 0;">Quantidade:</label>
+                    <input type="number" id="quantidade" value="1" min="1">
+                </div>
+            </div>
+            
+            <a href="carrinho.html" class="botao-principal" style="width: 100%; text-align: center; margin-top: 30px;">
+                <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+            </a>
+            
+            <div class="product-description">
+                <h3>Detalhes do Produto</h3>
+                <p>
+                    Material externo: Couro 100% Genuíno. Solado: Borracha antiderrapante. Fechamento: Cadarço. Ideal para: Uso casual e longas caminhadas.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Trocas e Devoluções</a> | 
+                <a href="#">Política de Privacidade</a> | 
+                <a href="contato.html">Fale Conosco</a>
+         </div>
+            <p>&copy; 2025 Carlão Tennis. Todos os direitos reservados.</p>
+        </div>
+    </footer>

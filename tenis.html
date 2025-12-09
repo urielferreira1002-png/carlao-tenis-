@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlão Tennis | Tênis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@600;700;800&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilos Específicos da Página de Listagem */
+        .listagem-layout {
+            display: flex;
+            gap: 30px;
+            padding-top: 40px;
+        }
+
+        .sidebar {
+            flex: 1; /* Coluna de Filtros */
+            min-width: 250px;
+            background-color: var(--cor-detalhe); 
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .produtos-principal {
+            flex: 3; /* Coluna de Produtos */
+        }
+
+        .sidebar h3 {
+            color: var(--cor-principal);
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--cor-fundo);
+            padding-bottom: 10px;
+        }
+
+        .filtro-grupo {
+            margin-bottom: 25px;
+        }
+
+        .filtro-grupo label {
+            display: block;
+            color: var(--cor-secundaria);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .filtro-grupo input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        /* Estilos do Seletor de Ordenação */
+        .ordenacao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: var(--cor-detalhe);
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .ordenacao select {
+            padding: 8px 12px;
+            border: 1px solid var(--cor-principal);
+            background-color: var(--cor-fundo);
+            color: var(--cor-secundaria);
+            border-radius: 4px;
+        }
+        
+        /* Grid de Produtos */
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        @media (max-width: 992px) {
+            .listagem-layout {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Carlão Tennis</a>
+        <nav>
+            <a href="tenis.html" style="color: var(--cor-principal);">Tênis</a>
+            <a href="bolsas.html">Bolsas</a>
+            <a href="mochilas.html">Mochilas</a>
+            <a href="novidades.html">Novidades</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="icones-utilidade">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="carrinho.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    <div class="container listagem-layout">
+        
+        <aside class="sidebar">
+            <h3>Filtros</h3>
+
+            <div class="filtro-grupo">
+                <label for="marca">Marca</label>
+                <select id="marca">
+                    <option value="">Todas as Marcas</option>
+                    <option value="nike">Marca X</option>
+                    <option value="adidas">Marca Y</option>
+                </select>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Tamanho</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> 38</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> 39</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> 40</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> 41</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> 42</label>
+                </div>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Cor</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> Bege</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> Preto</label>
+                    <label style="display: inline-flex; align-items: center;"><input type="checkbox"> Branco</label>
+                </div>
+            </div>
+
+            <a href="#" class="botao-secundario" style="width: 100%; text-align: center;">Aplicar Filtros</a>
+        </aside>
+
+        <main class="produtos-principal">
+            <h1>Coleção de Tênis</h1>
+            
+            <div class="ordenacao">
+                <p style="color: var(--cor-secundaria);">Mostrando 1–9 de 25 resultados</p>
+                <select>
+                    <option>Mais Relevantes</option>
+                    <option>Preço: Mais Baixo</option>
+                    <option>Preço: Mais Alto</option>
+                    <option>Mais Vendidos</option>
+                </select>
+            </div>
+
+            <div class="produtos-grid">
+                
+                <div class="produto-card">
+                    <img src="/1.jpeg" alt="Tênis Casual">
+                    <h3>Tênis Casual Básico</h3>
+                    <p class="preco">R$170,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                
+                <div class="produto-card">
+                    <img src="/2.jpeg" alt="Tênis Performance">
+                    <h3>Tênis Performance Elite</h3>
+                    <p class="preco">R$ 200,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+
+                <div class="produto-card">
+                    <img src="/3.jpeg" alt="Tênis Bege Clássico">
+                    <h3>Tênis Clássico Bege</h3>
+                    <p class="preco">R$ 199,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+
+                <div class="produto-card">
+                    <img src="/4.jpeg" alt="Tênis Preto">
+                    <h3>Tênis Urbano Preto</h3>
+                    <p class="preco">R$ 410,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                
+                <div class="produto-card">
+                    <img src="/5.jpeg" alt="Tênis Esportivo">
+                    <h3>Tênis Esportivo Lite</h3>
+                    <p class="preco">R$ 499,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+
+                <div class="produto-card">
+                    <img src="/6.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro Premium</h3>
+                    <p class="preco">R$ 720,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                
+                <div class="produto-card">
+                    <img src="/7.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro Premium</h3>
+                    <p class="preco">R$ 720,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                
+                <div class="produto-card">
+                    <img src="/8.avif" alt="Tênis Couro">
+                    <h3>Tênis em Couro Premium</h3>
+                    <p class="preco">R$ 720,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+ 
+                                <div class="produto-card">
+                    <img src="/10.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro branco </h3>
+                    <p class="preco">R$ 720,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/11.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro marrom escuro </h3>
+                    <p class="preco">R$ 720,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/12.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro preto </h3>
+                    <p class="preco">R$ 720,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/13.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro marrom </h3>
+                    <p class="preco">R$ 720,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/14.jpeg" alt="Tênis Couro">
+                    <h3>Tênis olympikus</h3>
+                    <p class="preco">R$ 100,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/15.jpeg" alt="Tênis Couro">
+                    <h3>Tênis olympikus</h3>
+                    <p class="preco">R$ 100,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/16.jpeg" alt="Tênis Couro">
+                    <h3>Tênis olympikus</h3>
+                    <p class="preco">R$ 100,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/17.jpeg" alt="Tênis Couro">
+                    <h3>Tênis olympikus</h3>
+                    <p class="preco">R$ 100,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/18.jpeg" alt="Tênis Couro">
+                    <h3>Tênis olympikus</h3>
+                    <p class="preco">R$100,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/19.jpeg" alt="Tênis Couro">
+                    <h3>Tênis olympikus</h3>
+                    <p class="preco">R$ 100,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/20.jpeg" alt="Tênis Couro">
+                    <h3>Tênis olympikus</h3>
+                    <p class="preco">R$ 95,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/21.jpeg" alt="Tênis Couro">
+                    <h3>Tênis olympikus</h3>
+                    <p class="preco">R$ 100,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                <div class="produto-card">
+                    <img src="/22.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro branco </h3>
+                    <p class="preco">R$ 150,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                                <div class="produto-card">
+                    <img src="/23.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro marrom </h3>
+                    <p class="preco">R$  150,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                                                <div class="produto-card">
+                    <img src="/24.jpeg" alt="Tênis Couro">
+                    <h3>Tênis em Couro preto</h3>
+                    <p class="preco">R$ 150,00</p>
+                    <a href="produto.html" class="botao-ver">Ver Produto</a>
+                </div>
+                
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="botao-secundario">Ver Mais Produtos</a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Trocas e Devoluções</a> | 
+                <a href="#">Política de Privacidade</a> | 
+                <a href="contato.html">Fale Conosco</a>
+            </div>
+            <p>&copy; 2025 Carlão Tennis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
